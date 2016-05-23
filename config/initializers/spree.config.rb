@@ -1,1 +1,1 @@
-spree.config.rb
+Spree::Config.set(logo: "store/continued_care_logo.png")
