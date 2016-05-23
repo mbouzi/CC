@@ -1,4 +1,4 @@
 Deface::Override.new(:virtual_path  => "spree/shared/_main_nav_bar",
-                     :insert_bottom => "li#home-link",
-                     :text          => "<li id='shop-link' data-hook><a href='/'>Shop</a></li>",
-                     :name          => "shop_link")
+                     :replace => "nav.col-md-12",
+                     :partial          => "spree/shared/_main_nav_bar",
+                     :name          => "pages_nav")
