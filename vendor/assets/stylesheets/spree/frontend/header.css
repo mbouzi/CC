@@ -1,0 +1,14 @@
+#spree-header{
+ background-color: rgb(240, 236, 227);
+ box-shadow: 7px 2px rgba(5, 5, 5, 0.28);
+}
+
+#header-nav a {
+ color: black;
+ font-family: NeutraDemi;
+ letter-spacing: 1px;
+}
+
+#header-nav a:hover {
+ color: #389981;
+}
