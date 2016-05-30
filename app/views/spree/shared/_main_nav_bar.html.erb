@@ -25,46 +25,34 @@
 					      <!-- <li class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li> -->
 					      <li role="presentation"><a role="menuitem" tabindex="-1"><%= taxons_tree(taxonomy.root, @taxon, max_level) %> </a></li>
 					    <% end %>
-					  <% end %>
-						<li role="presentation"><a role="menuitem" tabindex="-1">My Resupply</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1">About</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1">Help</a></li>
+					<% end %>
+				</li>
+				<li role="presentation"><a role="menuitem" tabindex="-1">My Resupply</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1">About</a></li>
+				<!-- Help Dropdown Submenu -->
+        <li role="presentation" class="dropdown-submenu">
+        	<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Help<span class='caret'></span>
+        	</a>
+        	<ul class="dropdown-menu" role="menu" aria-labellledby="dropdownMenu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Care Management</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Equipment Service</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Machines</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Masks</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Therapy</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Family Caregivers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Healthcare Providers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Insurance Providers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Nutrition</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1">Contact</a></li>
-
-				</ul>
-			</li>
-<!-- 	        <li><a href='#'>My Resupply</a></li>
-	        <li><a href='#'>About</a></li>
- -->
-	        <!-- Help Dropdown Submenu -->
-
-<!-- 	        <li class="dropdown-submenu">
-	        	<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Help<span class='caret'></span>
-	        	</a>
-	        	<ul class="dropdown-menu" role="menu" aria-labellledby="dropdownMenu1">
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Care Management</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Equipment Service</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">CPAP Machines</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">CPAP Masks</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">CPAP Therapy</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Family Caregivers</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Healthcare Providers</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Insurance Providers</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="#/products">Nutrition</a></li>
-
-
-				</ul>
-
-	        </li>
-	        <li><a href='#'>Contact</a></li>
- -->
- </ul>
- <ul class="nav navbar-nav navbar-right" data-hook>
-  <li id="link-to-cart" data-hook>
-    <noscript>
-      <%= link_to Spree.t(:cart), '/cart' %>
-    </noscript>
-    &nbsp;
-  </li>
-  <script>Spree.fetch_cart()</script>
-</ul>
+					</ul>
+				</li>
+		 </ul>
+		 <ul class="nav navbar-nav navbar-right" data-hook>
+		  <li id="link-to-cart" data-hook>
+		    <noscript>
+		      <%= link_to Spree.t(:cart), '/cart' %>
+		    </noscript>
+		    &nbsp;
+		  </li>
+		  <script>Spree.fetch_cart()</script>
+		</ul>
