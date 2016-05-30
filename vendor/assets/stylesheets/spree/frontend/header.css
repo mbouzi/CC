@@ -1,8 +1,10 @@
 #spree-header{
- background-color: rgb(240, 236, 227);
+ background: rgb(240, 236, 227);
  box-shadow: 7px 2px rgba(5, 5, 5, 0.28);
 }
-
+#spree-header #logo {
+  margin-bottom: 0;
+}
 #header-nav a {
  color: black;
  font-family: NeutraDemi;
@@ -11,4 +13,8 @@
 
 #header-nav a:hover {
  color: #389981;
+}
+#spree-header #logo img {
+	width: 100px;
+	margin-top: -.5em;
 }
