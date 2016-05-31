@@ -2,6 +2,11 @@
  background: rgb(240, 236, 227);
  box-shadow: 1px 2px rgba(5, 5, 5, 0.28);
 }
+#spree-header #header {
+  background: #D0CCCC;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: auto;
+}
 #spree-header #logo {
   margin-bottom: 0;
 }
@@ -10,7 +15,17 @@
  font-family: NeutraDemi;
  letter-spacing: 1px;
 }
-
+#top-nav-bar {
+  background-color: #D0CCCC;
+  height: 50px;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar {
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
 #header-nav a:hover {
  color: #389981;
 }
