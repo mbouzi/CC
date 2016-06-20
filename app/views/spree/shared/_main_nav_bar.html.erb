@@ -1,0 +1,55 @@
+<% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+<!-- Site Logo -->
+      <!-- <div class="row">
+        <figure id="logo" class="col-md-4" data-hook>
+          <%= logo %>
+        </figure>
+      </div> -->
+<ul id="header-nav" class='header nav navbar-nav navbar-right collapse navbar-collapse' data-hook>
+			<li data-hook id="home-link"><%= link_to Spree.t(:home), spree.root_path %></li>
+
+			<!-- Shop Dropdown Submenu -->
+
+			<li class="dropdown-submenu">
+				<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" >
+					Shop
+					<span class="caret"></span>
+				</a>
+
+				<ul class="dropdown-menu" role="menu" aria-labellledby="dropdownMenu1">
+					<li role="presentation"class="dropdown-header">Products</li>
+					<li class="dropdown-submenu" role="presentation">
+						<a role="menuitem" tabindex="-1" href="">Sale<span class="caret"></span></a>
+				        <ul class="dropdown-menu second-level">
+				        	<li><a href="">Holiday Sale</a></li>
+				        	<li><a href="">50% Off</a></li>
+				        </ul>
+					</li>
+					<% @taxonomies.each do |taxonomy| %>
+					    <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+					      <!-- <li class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li> -->
+					      <li role="presentation"><a role="menuitem" tabindex="-1"><%= taxons_tree(taxonomy.root, @taxon, max_level) %> </a></li>
+					    <% end %>
+					<% end %>
+				</li>
+				<li role="presentation"><a role="menuitem" tabindex="-1">My Resupply</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1">About</a></li>
+				<!-- Help Dropdown Submenu -->
+        <li role="presentation" class="dropdown-submenu">
+        	<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Help<span class='caret'></span>
+        	</a>
+        	<ul class="dropdown-menu" role="menu" aria-labellledby="dropdownMenu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Care Management</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Equipment Service</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Machines</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Masks</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Therapy</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Family Caregivers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Healthcare Providers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Insurance Providers</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="">Nutrition</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1">Contact</a></li>
+					</ul>
+				</li>
+		 </ul>
+</ul>
