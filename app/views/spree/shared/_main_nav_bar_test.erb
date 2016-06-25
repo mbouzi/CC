@@ -18,18 +18,16 @@
 				        	<li><a href="">50% Off</a></li>
 				        </ul>
 					</li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Machines</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Masks</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">CPAP Accessories</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Baby & Toddler</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Hospital Beds</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Nebulizers</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Mobility Assistive Equipment</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Incontinence</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Oxygen</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Provent Therapy</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="">Power Solutions</a></li>
+          <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
 
+          <!-- <nav id="taxonomies" class="sidebar-item" data-hook> -->
+            <% @taxonomies.each do |taxonomy| %>
+              <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+                <li role="presentation" class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li>
+                <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+              <% end %>
+            <% end %>
+          <!-- </nav> -->
         </ul>
 
       </li>
