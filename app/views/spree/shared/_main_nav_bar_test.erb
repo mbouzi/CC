@@ -20,6 +20,7 @@
 					</li>
           <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
 
+<!-- TODO: make a partial for this -->
           <!-- <nav id="taxonomies" class="sidebar-item" data-hook> -->
             <% @taxonomies.each do |taxonomy| %>
               <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
