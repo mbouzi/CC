@@ -18,17 +18,7 @@
 				        	<li><a href="">50% Off</a></li>
 				        </ul>
 					</li>
-          <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
-
-<!-- TODO: make a partial for this -->
-          <!-- <nav id="taxonomies" class="sidebar-item" data-hook> -->
-            <% @taxonomies.each do |taxonomy| %>
-              <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
-                <li role="presentation" class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li>
-                <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
-              <% end %>
-            <% end %>
-          <!-- </nav> -->
+          <%= render :partial => 'spree/shared/shop_nav' %>
         </ul>
 
       </li>
