@@ -7,8 +7,9 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: auto;
 }
-#spree-header #logo {
-  margin-bottom: 0;
+#cc-logo img {
+  width: 60px;
+  margin-top: 3px;
 }
 #header-nav a {
  color: black;
