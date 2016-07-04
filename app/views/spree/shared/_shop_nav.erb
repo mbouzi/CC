@@ -2,11 +2,13 @@
 
 <!-- TODO: make a partial for this -->
 <!-- <nav id="taxonomies" class="sidebar-item" data-hook> -->
-  <% @taxonomies.each do |taxonomy| %>
+  <%  if @taxonomies %>
+    <% @taxonomies.each do |taxonomy| %>
 
-    <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
-      <li role="presentation" class='taxonomy-root dropdown-header'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li>
-      <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+      <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
+        <li role="presentation" class='taxonomy-root dropdown-header'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></li>
+        <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+      <% end %>
     <% end %>
   <% end %>
 <!-- </nav> -->
