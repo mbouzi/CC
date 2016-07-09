@@ -1,7 +1,7 @@
 <% @body_id = 'product-details' %>
 
 <% cache [I18n.locale, current_currency, @product, @product.possible_promotions] do %>
-  <div data-hook="product_show" class="container" itemscope itemtype="https://schema.org/Product">
+  <div data-hook="product_show" id="product_show" class="container" itemscope itemtype="https://schema.org/Product">
     <div class="row">
       <div class="col-md-8" data-hook="product_left_part">
         <div data-hook="product_left_part_wrap">
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 <% end %>
