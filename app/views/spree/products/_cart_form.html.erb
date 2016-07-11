@@ -46,13 +46,14 @@
         <div class="description" itemprop="description" data-hook="description">
           <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
         </div>
-
-        <div class="add-to-cart">
+        <hr>
+        <div class="add-to-cart row">
           <br/>
-          <div class="input-group">
+          <div class="col-md-3">
             <%= number_field_tag :quantity, 1, :class => 'title form-control', :min => 1 %>
+            <br>
             <span class="input-group-btn">
-              <%= button_tag :class => 'btn btn-success', :id => 'add-to-cart-button', :type => :submit do %>
+              <%= button_tag :class => 'to-cart-btn btn', :id => 'add-to-cart-button', :type => :submit do %>
                 <%= Spree.t(:add_to_cart) %>
               <% end %>
             </span>
