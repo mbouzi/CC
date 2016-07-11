@@ -9,3 +9,6 @@
  *= require_tree .
  *= require spree/frontend/spree_paypal_express
 */
+body {
+  background-color: rgb(252, 254, 252);
+}
