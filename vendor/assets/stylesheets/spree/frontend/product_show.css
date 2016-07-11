@@ -2,6 +2,11 @@
   margin-top: 12em;
   font-family: NeutraDemi, sans-serif;;
 }
+#product_show hr {
+  border-color: #93866d;
+  border-width: 1px;
+  margin-bottom: 5px;
+}
 #product_show .product-title {
   color: #93866d;
   font-weight: bold;
@@ -16,5 +21,20 @@
 #product_show .description {
   color: #555;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 450;
+  font-weight: 400;
+}
+.to-cart-btn {
+  border: 2px solid #389981;
+  /*clear: both;*/
+  /*float: left;*/
+  background-color: transparent;
+  color: #389981;
+  transition: .2s;
+}
+.to-cart-btn.btn {
+  border-radius: 0px;
+}
+.to-cart-btn:hover {
+  background-color: #389981;
+  color: white;
 }
