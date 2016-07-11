@@ -30,9 +30,9 @@
       <div data-hook="product_price" class="col-md-12">
         <div id="product-price">
           <div>
-            <span class="lead price selling" itemprop="price">
+            <h3 class="price selling" itemprop="price">
               <%= display_price(@product) %>
-            </span>
+            </h3>
             <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
           </div>
 
@@ -43,7 +43,7 @@
             <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
           <% end %>
         </div>
-        <div itemprop="description" data-hook="description">
+        <div class="description" itemprop="description" data-hook="description">
           <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
         </div>
 
