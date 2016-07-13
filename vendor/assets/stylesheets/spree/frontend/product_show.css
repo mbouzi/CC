@@ -38,3 +38,14 @@
   background-color: #389981;
   color: white;
 }
+.features li::before {
+    content: " ► ";
+    color: rgb(56, 153, 129);
+    font-size: 0.7em;
+}
+.features li {
+    font-size: 12px;
+    position: relative;
+    list-style: none;
+    right: 40px;
+}
