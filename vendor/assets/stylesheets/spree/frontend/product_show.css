@@ -7,7 +7,8 @@
   border-width: 1px;
   margin-bottom: 5px;
 }
-#product_show .product-title {
+#product_show .product-title,
+#product_show .features h3 {
   color: #93866d;
   font-weight: bold;
 }
