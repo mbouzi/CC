@@ -1,0 +1,55 @@
+#product_show {
+  margin-top: 9em;
+  font-family: NeutraDemi, sans-serif;;
+}
+#product_show hr {
+  border-color: #93866d;
+  border-width: 1px;
+  margin-bottom: 5px;
+}
+#product_show .product-title,
+#product_show .features h3 {
+  color: #93866d;
+  font-weight: bold;
+}
+#product-price {
+  margin-top: -20px;
+}
+#product-price h3{
+  font-size: 1.6em;
+  margin-top: -10px;
+}
+#product_show .description {
+  color: #555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+.add-to-cart input.title {
+  width: 45px;
+}
+.to-cart-btn {
+  border: 2px solid #389981;
+  /*clear: both;*/
+  /*float: left;*/
+  background-color: transparent;
+  color: #389981;
+  transition: .2s;
+}
+.to-cart-btn.btn {
+  border-radius: 0px;
+}
+.to-cart-btn:hover {
+  background-color: #389981;
+  color: white;
+}
+.features li::before {
+    content: " ► ";
+    color: rgb(56, 153, 129);
+    font-size: 0.7em;
+}
+.features li {
+    font-size: 12px;
+    position: relative;
+    list-style: none;
+    right: 40px;
+}
