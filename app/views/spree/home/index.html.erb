@@ -10,24 +10,24 @@
   <div class="carousel-inner">
       
       <div class="item active">
-        <img src="imgs/ResMedSale.png" class="img-responsive" >
+        <%= link_to(image_tag("ResMedSale.png", :class => "img-responsive")) %>
         <div class="carousel-caption">
         </div>
       </div>
 
       <div class="item">
-        <img src="imgs/ResMedSale.png" class="img-responsive" >
+        <%= link_to(image_tag("ResMedSale.png", :class => "img-responsive")) %>
         <div class="carousel-caption">
         </div>
       </div>
 
       <a href="#/" id="carousel-left" class="carousel-control left" data-slide="prev">
-        <img src="imgs/left.png">
+        <%= image_tag 'left.png' %>
         <span class="icon-prev"></span>
       </a>
 
       <a href="#/" id="carousel-right" class="carousel-control right" data-slide="next">
-        <img src="imgs/right.png">
+        <%= image_tag 'right.png' %>
         <span class="icon-next"> </span>
       </a>
     </div>
@@ -39,7 +39,7 @@
     <div class='row first-row'>
       <div class="col-sm-6">
         <h3 class="wow fadeInRight animated left-title"><i class="glyphicon glyphicon-triangle-right glyph-left"></i>Top Rated</h3>
-        <img class="cpap-row" src="imgs/cpap-item-2.jpg">
+        <%= link_to(image_tag("cpap-item-2.jpg", :class => "cpap-row")) %>
       </div>
 
 
@@ -74,28 +74,28 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <img class="sponsor" src="imgs/ResMed-rg.png">
+          <%= link_to(image_tag("ResMed-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
-          <img class="sponsor" src="imgs/invacare-rg.png">
+          <%= link_to(image_tag("nvacare-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
-          <img class="sponsor" src="imgs/fisher-paykel-rg.png">
+          <%= link_to(image_tag("fisher-paykel-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
-          <img class="sponsor" src="imgs/pari-logo-rg.jpg">
+          <%= link_to(image_tag("Ppari-logo-rg.jpg", :class => "sponsor")) %>
         </div>
       </div>
 
       <div class="second-sponsrow">
         <div class="col-sm-4">
-          <img class="sponsor" src="imgs/Philips-rg.png">
+          <%= link_to(image_tag("Philips-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-4">
-          <img class="sponsor" src="imgs/drive-medical-logo.jpg">
+          <%= link_to(image_tag("drive-medical-logo.jpg", :class => "sponsor")) %>
         </div>
         <div class="col-sm-4">
-          <img class="sponsor" src="imgs/sequal-logo.png">
+          <%= link_to(image_tag("sequal-logo.png", :class => "sponsor")) %>
         </div>
       </div>
     </div>
