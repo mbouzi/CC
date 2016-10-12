@@ -36,21 +36,30 @@
 
 <main id="content">
   <div class="container">
-    <div class='row first-row'>
+    <div class=' first-row'>
       <div class="col-sm-6">
-        <h3 class="wow fadeInRight animated left-title"><i class="glyphicon glyphicon-triangle-right glyph-left"></i>Top Rated</h3>
+        <h3 class="wow fadeInRight animated sale-title">On Sale Now</h3>
+        <p></p>
+      </div>
+      <div class="col-sm-6">
         <%= link_to(image_tag("cpap-item-2.jpg", :class => "cpap-row")) %>
       </div>
+    </div>
 
 
-      <div class="col-sm-6">
-        <h3 class="wow fadeInLeft animated right-title">Top Sellers<i class="glyphicon glyphicon-triangle-left glyph-right"></i></h3>
-        <img class="cpap-row" src="imgs/cpap-item-2.jpg">
+      <div class=' second-row'>
+        <div class="col-sm-6">
+          <%= link_to(image_tag("cpap-item-2.jpg", :class => "cpap-row")) %>
+        </div>
+        <div class="col-sm-6">
+          <h3 class="wow fadeInRight animated top-title">Top Sellers</h3>
+          <p></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class='row second-row'>
+  <div class='row third-row'>
 
     <div class="first col-sm-4 col-xs-12">
       <h2 class="wow fadeInDown animated second-row-title" data-center-top="margin-left:-1;" 
@@ -77,13 +86,13 @@
           <%= link_to(image_tag("ResMed-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
-          <%= link_to(image_tag("nvacare-rg.png", :class => "sponsor")) %>
+          <%= link_to(image_tag("invacare-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
           <%= link_to(image_tag("fisher-paykel-rg.png", :class => "sponsor")) %>
         </div>
         <div class="col-sm-3">
-          <%= link_to(image_tag("Ppari-logo-rg.jpg", :class => "sponsor")) %>
+          <%= link_to(image_tag("pari-logo-rg.jpg", :class => "sponsor")) %>
         </div>
       </div>
 
