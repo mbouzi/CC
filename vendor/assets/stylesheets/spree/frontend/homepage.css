@@ -13,7 +13,7 @@
 
 #content {
 	width: 100%;
-	
+	background: #fbfbfb;
 }
 
 
@@ -82,26 +82,36 @@ ul img:hover {
 #carousel-left img {
 	float: left;
 	margin-left: 2.9em;
+	display: none;
 }
 
 #carousel-right img {
 	float: right;
+	display: none;
 }
 
 .item img {
 	width: 100%;
+}
+F
+.promo-sec {
+	background: #f7fbff;
 }
 
 .sale-title {
 	color: #222;
     font-family: NeutraDemi;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .top-title {
 	color: #222;
     font-family: NeutraDemi;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .glyph-left {
@@ -199,6 +209,7 @@ ul img:hover {
 	position: relative;
 	top: 4em;
 	margin-bottom: 8em;
+	left: 4em;
 }
 
 .height {

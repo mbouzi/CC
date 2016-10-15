@@ -9,6 +9,11 @@
  *= require_tree .
  *= require spree/frontend/spree_paypal_express
 */
+
+
+@font-face { font-family: NeutraDemi; src: url('NeutraDemi.ttf'); } 
+@font-face { font-family: Georgia; src: url('Georgia.ttf'); }
+ 
 body {
   background-color: rgb(252, 254, 252);
 }
