@@ -1,0 +1,50 @@
+<section class="hero">
+  <div class="hero-wrapper">
+    <h1>SHOP ALL</h1>
+    <!-- <img src="/spree/heros/cpap-header.jpg" alt="" /> -->
+  </div>
+</section>
+<!-- <% if "spree/products" == params[:controller] && @taxon || @taxonomies.present? %>
+  <% content_for :sidebar do %>
+    <div data-hook="homepage_sidebar_navigation">
+      <% if "spree/products" == params[:controller] && @taxon %>
+        <%= render partial: 'spree/shared/filters' %>
+      <% else %>
+        <%= render partial: 'spree/shared/taxonomies' %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %> -->
+
+<% if params[:keywords] %>
+  <div data-hook="search_results">
+    <% if @products.empty? %>
+      <h6 class="search-results-title"><%= Spree.t(:no_products_found) %></h6>
+    <% else %>
+      <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+    <% end %>
+  </div>
+<% else %>
+  <div data-hook="homepage_products">
+    <% cache(cache_key_for_products) do %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="product-filters">
+        <label>Sort By: </label>
+        <select class="form-control sort-opt" name="">
+          <option>Select:</option>
+          <option>Low-High</option>
+          <option>A-Z</option>
+        </select>
+        <label>Filter By:</label>
+        <select class="form-control sort-opt" name="">
+          <option>Select:</option>
+        </select>
+      </div>
+      <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+    <% end %>
+  </div>
+<% end %>

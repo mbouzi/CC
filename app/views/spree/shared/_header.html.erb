@@ -6,6 +6,33 @@
       </div>
     </div>
   </header>
+  <div id="cc-logo" class="row">
+    <figure data-hook>
+      <%= logo %>
+    </figure> 
+  </div>
+  <div id="user-nav" class="row">
+    <nav>
+      <ul class="nav navbar-nav">
+        <!-- My Account, Login, Cart -->
+          <% if spree_current_user %>
+            <li id="my-account"><%= link_to Spree.t(:my_account), spree.account_path %></li>
+            <li id="logout"><%= link_to Spree.t(:logout), spree.logout_path %></li>
+          <% else %>
+            <li id="link-to-login"><%= link_to Spree.t(:login), spree.login_path %></li>
+          <% end %>
+          <li id="link-to-cart" data-hook>
+            <noscript>
+              <%= link_to Spree.t(:cart), '/cart' %>
+            </noscript>
+            &nbsp;
+          </li>
+          <script>Spree.fetch_cart()</script>
+
+      </ul>      
+    </nav>
+  </div>
+
   <div class="container">
     <%= render :partial => 'spree/shared/main_nav_bar_test' if store_menu? %>
   </div>
