@@ -1,0 +1,117 @@
+#content {
+  width: 100%;
+  position: relative;
+}
+#content h1 {
+  text-align: center;
+  font-size: 4em;
+  color: #389981;
+}
+#content .hero {
+  width: 100%;
+  position: relative;
+  margin-top: 5.2em;
+  background-image: url("/spree/heros/cpap-header.jpg");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#content .hero-wrapper {
+  display: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+}
+#content .hero h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 45%;
+  bottom: 0;
+  text-shadow: 1px 1px #4e4e4e;
+}
+#products {
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+#products .product-body .info {
+  color: #23527c;
+  font-size: 1.3em;
+}
+.product-filters {
+  margin-top: 1em;
+  /* background-color: #93866d; */
+  width: 50%;
+  /* box-shadow: 5px 5px 5px silver; */
+  /*font-family: NeutraDemi;*/
+  letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  text-align: center;
+}
+.product-filters label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.product-filters .form-control.sort-opt {
+   background: transparent;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   color: black;
+   width: 20%;
+   display: inline-block;
+   height: 2em;
+  /* font-family: NeutraDemi; */
+}
+#products .panel-default, #products .panel-footer {
+  background: #f0ece3;
+}
+#products .panel-default {
+  border-color: transparent; 
+  border-radius: 15px;
+}
+#products .more-info {
+  cursor: pointer;
+  background: #d0cccc;
+  width: 20px;
+  border-radius: 50%;
+  color: gray;
+  font-family: 'Times New Roman', serif;
+}
+#products .modal-content {
+  background-color: #f0ece3;
+}
+#products .modal {
+  top: 15%;
+}
+#products .modal .list-inline {
+  text-align: center;
+}
+#products .modal-content {
+  padding: 20px;
+}
+#products .modal-content .panel-default {
+  background: transparent;
+  border-radius: 2px;
+  border-color: none;
+  box-shadow: none;
+}
+#products .modal-footer .view-more {
+  position: absolute;
+  left: 44%;
+  transition: .2s all ease-in-out;
+  -webkit-transition: .2s all ease-in-out;
+}
+#products .modal-footer .view-more:hover {
+  background-color: #23527c;
+  color: white;
+}

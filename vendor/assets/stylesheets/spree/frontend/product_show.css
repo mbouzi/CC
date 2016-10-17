@@ -1,5 +1,5 @@
 #product_show {
-  margin-top: 9em;
+  margin-top: 18em;
   font-family: NeutraDemi, sans-serif;;
 }
 #product_show hr {
@@ -25,7 +25,7 @@
   font-weight: 400;
 }
 .add-to-cart input.title {
-  width: 45px;
+  width: 95px;
 }
 .to-cart-btn {
   border: 2px solid #389981;
